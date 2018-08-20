@@ -12,23 +12,16 @@
 
 
 function maxSubArray(arr) {
-  // Track the max sum so for
-  let maxSoFar = 0;
+  // The max contiguous sum
+  let maxSum = 0;
 
-  // Track the max sum if this array ended here
-  let maxEndingHere = 0;
+  // The sum of all the elements up to this point
+  let sumEndingHere = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    maxEndingHere += arr[i];
-
-    if (maxEndingHere < 0) {
-      maxEndingHere = 0;
-    }
-
-    if (maxEndingHere > maxSoFar) {
-      maxSoFar = maxEndingHere;
+    sumEndingHere += arr[i];
+    if (sumEndingHere < 0) {
+      
     }
   }
-
-  return maxSoFar;
 }
